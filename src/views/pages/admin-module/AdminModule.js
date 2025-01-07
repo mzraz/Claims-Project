@@ -12,6 +12,8 @@ import AccessibleIcon from '@mui/icons-material/Accessible';
 import StorageIcon from '@mui/icons-material/Storage';
 import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService';
 import DocumentScannerIcon from '@mui/icons-material/DocumentScanner';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
 const iconMap = {
   RoomPreferencesIcon,
   KeyIcon,
@@ -21,6 +23,7 @@ const iconMap = {
   StorageIcon,
   HomeRepairServiceIcon,
   DocumentScannerIcon,
+  CheckCircleIcon,
 };
 
 const AdminModule = () => {
@@ -131,9 +134,23 @@ const AdminModule = () => {
                   />
                   <Typography variant="h6">{feature.name}</Typography>
                 </Box>
-                <Typography variant="body2" color="text.secondary">
-                  {feature.description}
-                </Typography>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    mb: 2,
+                    justifyContent: 'space-between',
+                    textAlign: 'center',
+                    width: '100%',
+                  }}
+                >
+                  <Typography variant="body2" color="text.secondary">
+                    {feature.description}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    <CheckCircleIcon />
+                  </Typography>
+                </Box>
               </Card>
             </Link>
           </motion.div>

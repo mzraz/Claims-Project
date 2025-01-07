@@ -22,6 +22,7 @@ import UploadAvatar from '../../../apps/user-profile/UploadAvatar';
 import { updateUserData } from '../../../../store/auth/login/LoginSlice';
 import { updateProfileImageByUser } from '../../../../store/auth/userProfile/ProfileSlice';
 import { useTheme } from '@mui/material/styles';
+import BreadcrumbNext from '../../../../layouts/full/shared/breadcrumb/BreadcrumbNext';
 
 const validationSchema = () =>
   yup.object({
@@ -268,7 +269,23 @@ const FirmManagement = () => {
         severity={alert.severity}
         message={alert.message}
       />
-      <Breadcrumb title="Firm Management" items={BCrumb} />
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          mb: 2,
+          justifyContent: 'space-between',
+          textAlign: 'center',
+          width: '100%',
+        }}
+      >
+        <Breadcrumb title="Firm Management" items={BCrumb} />
+        <BreadcrumbNext
+          title="Firm Management"
+          items={BCrumb}
+          navigationURL={'/admin/driver-detail'}
+        />
+      </Box>
 
       {loading ? (
         <Box mt={5}>

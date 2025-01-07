@@ -148,6 +148,13 @@ const Inspection = Loadable(
 );
 
 const ClientModule = Loadable(lazy(() => import('../views/pages/client/AdminModule')));
+const PI = Loadable(lazy(() => import('../views/pages/PI/AdminModule')));
+const TP = Loadable(lazy(() => import('../views/pages/TP/AdminModule')));
+const Accident = Loadable(lazy(() => import('../views/pages/accident/AdminModule')));
+const Notes = Loadable(lazy(() => import('../views/pages/notes/AdminModule')));
+const Reminder = Loadable(lazy(() => import('../views/pages/reminders/AdminModule')));
+const Payments = Loadable(lazy(() => import('../views/pages/payments/AdminModule')));
+
 const FirmManagement2 = Loadable(
   lazy(() => import('../views/pages/client/firmManagement/FirmManagement')),
 );
@@ -286,6 +293,54 @@ const Router = (isAuthenticated) => [
         element: (
           <ProtectedRoute requiredFeature="Admin Module">
             <ClientModule />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: '/tp',
+        element: (
+          <ProtectedRoute requiredFeature="Admin Module">
+            <TP />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: '/accident',
+        element: (
+          <ProtectedRoute requiredFeature="Admin Module">
+            <Accident />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: '/pi',
+        element: (
+          <ProtectedRoute requiredFeature="Admin Module">
+            <PI />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: '/notes',
+        element: (
+          <ProtectedRoute requiredFeature="Admin Module">
+            <Notes />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: '/reminders',
+        element: (
+          <ProtectedRoute requiredFeature="Admin Module">
+            <Reminder />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: '/payments',
+        element: (
+          <ProtectedRoute requiredFeature="Admin Module">
+            <Payments />
           </ProtectedRoute>
         ),
       },

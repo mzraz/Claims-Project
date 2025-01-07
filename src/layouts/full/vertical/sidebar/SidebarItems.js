@@ -78,6 +78,14 @@ import {
   IconTicket,
   IconUserCircle,
   IconLayoutDashboard,
+  IconAbacus,
+  IconCarCrash,
+  IconUserCheck,
+  IconAmbulance,
+  IconShieldHalfFilled,
+  IconId,
+  IconNotes,
+  IconListCheck,
 } from '@tabler/icons';
 
 const iconMap = {
@@ -86,6 +94,14 @@ const iconMap = {
   IconTicket,
   IconUserCircle,
   IconLayoutDashboard,
+  IconAbacus,
+  IconCarCrash,
+  IconUserCheck,
+  IconShieldHalfFilled,
+  IconAmbulance,
+  IconId,
+  IconNotes,
+  IconListCheck,
 };
 const SidebarItems = () => {
   const { pathname } = useLocation();
@@ -108,26 +124,26 @@ const SidebarItems = () => {
         {
           id: 'admin',
           title: 'Vehicle Insurance',
-          icon: IconSettings2,
+          icon: IconShieldHalfFilled,
           href: '/admin',
         },
         {
           id: 'client',
           title: 'Client Details',
-          icon: IconSettings2,
+          icon: IconUserCheck,
           href: '/client',
         },
         {
-          id: 'admin',
+          id: 'tp',
           title: 'TP',
-          icon: IconSettings2,
-          href: '/dashboards/modern',
+          icon: IconAmbulance,
+          href: '/tp',
         },
         {
-          id: 'admin',
+          id: 'accident',
           title: 'Accident',
-          icon: IconSettings2,
-          href: '/dashboards/modern',
+          icon: IconCarCrash,
+          href: '/accident',
         },
         // {
         //   id: 'admin',
@@ -136,29 +152,29 @@ const SidebarItems = () => {
         //   href: '/dashboards/modern',
         // },
         {
-          id: 'admin',
+          id: 'pi',
           title: 'PI',
-          icon: IconSettings2,
-          href: '/dashboards/modern',
+          icon: IconId,
+          href: '/pi',
         },
         {
-          id: 'admin',
+          id: 'notes',
           title: 'Notes',
-          icon: IconSettings2,
-          href: '/dashboards/modern',
+          icon: IconNotes,
+          href: '/notes',
         },
         {
-          id: 'admin',
+          id: 'reminders',
           title: 'Reminders',
-          icon: IconSettings2,
-          href: '/dashboards/modern',
+          icon: IconListCheck,
+          href: '/reminders',
         },
-        {
-          id: 'admin',
-          title: 'Payments',
-          icon: IconSettings2,
-          href: '/dashboards/modern',
-        },
+        // {
+        //   id: 'payments',
+        //   title: 'Payments',
+        //   icon: IconSettings2,
+        //   href: '/payments',
+        // },
       ];
     }
 

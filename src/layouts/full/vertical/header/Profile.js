@@ -42,7 +42,7 @@ const Profile = () => {
         }}
         onClick={handleClick2}
       >
-        {/* <Avatar
+        <Avatar
           src={
             user?.profileFileName ||
             `https://ams.autobeatx.co.uk:8081/AMS/Users/GetProfileImageByFileName?fileName=`
@@ -51,7 +51,7 @@ const Profile = () => {
             width: 35,
             height: 35,
           }}
-        /> */}
+        />
       </IconButton>
       {/* ------------------------------------------- */}
       {/* Message Dropdown */}
